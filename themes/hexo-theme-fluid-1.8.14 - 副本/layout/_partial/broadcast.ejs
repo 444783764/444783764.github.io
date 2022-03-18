@@ -1,0 +1,22 @@
+<% if (theme.broadcast.enable && !page.layout){ %>
+    <div class="notice">
+        <svg class="icon-laba" aria-hidden="true">
+            <use xlink:href="#icon-laba"></use>
+        </svg>
+        <span class="notice-content">
+            <span class="element"></span>
+        </span>
+    </div>
+    <script src="https://cdn.bootcdn.net/ajax/libs/typed.js/2.0.12/typed.js"></script>
+    <script>
+      var typed = new Typed(".element", {
+        strings: ["<%= theme.broadcast.text %>"],  //输入内容, 支持html标签
+        startDelay: 0,                             //开始延迟
+        typeSpeed: 50,                             //打字速度，数字越大，速度越慢。
+        backSpeed: 75,                             //回退速度
+        loop: false,                               //是否循环
+        showCursor: true,                          //显示游标
+        cursorChar: '_',                           //游标样式
+      });
+    </script>
+<% } %>

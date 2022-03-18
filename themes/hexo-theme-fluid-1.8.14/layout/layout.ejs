@@ -1,0 +1,211 @@
+<%
+var subtitle = page.subtitle || page.title
+var banner_img = page.banner_img || theme.index.banner_img
+var banner_img_height = page.banner_img_height || theme.index.banner_img_height
+var banner_mask_alpha = page.banner_mask_alpha || theme.index.banner_mask_alpha
+var colorSchema = theme.dark_mode && theme.dark_mode.enable && theme.dark_mode.default ? theme.dark_mode.default : ''
+%>
+
+<!DOCTYPE html>
+<html lang="<%= config.language %>" <%= colorSchema ? `data-default-color-scheme=${colorSchema}` : '' %>>
+
+<%- partial('_partial/head') %>
+
+<body>
+  <header style="height: <%- banner_img_height %>vh;">
+    <%- partial('_partial/nav') %>
+    <div class="banner" id="banner" <%- theme.banner && theme.banner.parallax && 'parallax=true' %>
+         style="background: url('<%- url_for(banner_img) %>') no-repeat center center;
+           background-size: cover;">
+      <div class="full-bg-img">
+        <div class="mask flex-center" style="background-color: rgba(0, 0, 0, <%= parseFloat(banner_mask_alpha) %>)">
+          <div class="page-header text-center fade-in-up">
+            <span style="color: #FFC0CB" class="h2" id="subtitle" title="<%= subtitle %>">
+              <% if(!theme.fun_features.typing.enable) { %>
+                <%- subtitle %>
+              <% } %>
+            </span>
+
+            <% if(is_post() && page.meta !== false) { %>
+              <%- partial('_partial/post-meta') %>
+            <% } %>
+          </div>
+
+          <% if (theme.scroll_down_arrow.enable && theme.scroll_down_arrow.banner_height_limit <= banner_img_height && page.layout !== '404') { %>
+            <div class="scroll-down-bar">
+              <i class="iconfont icon-arrowdown"></i>
+            </div>
+          <% } %>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+  <main>
+
+      <script src="https://bbchin.com/themes/joe2.0/source/lib/APlayer/APlayer.min.js"></script>
+      <script src="https://bbchin.com/themes/joe2.0/source/lib/meting/meting.min.js"></script>
+      <!--end-->
+    <% if(is_post() || page.layout === '404') { %>
+      <%- body %>
+    <% } else { %>
+            <div class="container nopadding-x-md">
+          <!-- 公告栏 添加代码 -->
+                <div id="board" class=" notice_board">
+          <% if (theme.broadcast.enable){ %>
+              <%- partial('_partial/broadcast') %>
+          <% } %>
+            </div>
+                <!--倒计时-->
+                <% if (theme.broadcast.enable && !page.layout){ %><!--只显示在首页，其他页面不显示-->
+                <div id="board" class="notice_board">
+                    <style type="text/css">
+                      .STYLE1 {color: #FFA500}
+                      .STYLE2 {
+                        color:#FFA500 ;
+                        font-weight: bold;
+                      }
+
+                      #nxtXmas{text-align: center; color: #FFA500;}
+                    </style>
+                    <div align="center" class="STYLE1"><span class="STYLE2">距离<font color="#dc143c">专插本</font>还有：</span> </div>
+                    <div id="nxtXmas">
+                        <div align="center">日期</div>
+                    </div>
+                    <div align="center"><br />
+                    </div>
+                    <div align="center">
+                        <script type="text/javascript" language="javascript">
+                          <!--
+                          function iCounter() {
+                            if (!Date.now) {
+                              Date.now = function () {
+                                return new Date().getTime();
+                              };
+                            }
+                            var birthday = new Date('2024-04-01T00:00:00.000+08:00');
+                            var diff = new Date(birthday - Date.now());
+                            var yeardiff = diff.getUTCFullYear() - new Date(0).getUTCFullYear();
+                            diff.setUTCFullYear(new Date(0).getUTCFullYear());
+                            document.getElementById("nxtXmas").innerHTML ='<font color="#00CED1">'+ yeardiff+'</font>'+ ' <span>年</span> '+ '<font color="#00CED1">' + Math.floor(diff.getTime()/(1000*60*60*24))+'</font>' + ' <span>天</span> ' +'<font color="#00CED1">'+ diff.getUTCHours() +'</font>'+' <span>小时</span> '+'<font color="#00CED1">'+ diff.getUTCMinutes()+'</font>' +' <span>分</span> '+'<font color="#00CED1">'+ diff.getUTCSeconds()+'</font>' +' <span>秒</span><br /> ';
+                            setTimeout("iCounter()",1000);
+                          }
+
+                          iCounter();
+                          -->
+                        </script>
+                    </div>
+                </div>
+                <% } %>
+                <!--end-->
+
+
+          <div class="py-5" id="board"
+          <%- banner_img_height >= 100 && theme.banner && theme.banner.parallax ? 'style=margin-top:0' : '' %>>
+          <% if(page.layout === 'about') { %>
+            <div class="about-avatar">
+              <img src="<%= url_for(theme.about.avatar) %>"
+                   class="img-fluid" alt="avatar">
+            </div>
+          <% } %>
+          <div class="container">
+            <div class="row">
+              <div class="col-12 col-md-10 m-auto">
+                <%- body %>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <% } %>
+
+    <% if (theme.scroll_top_arrow.enable) { %>
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    <% } %>
+
+    <% if (theme.search.enable) { %>
+      <%- partial('_partial/search') %>
+    <% } %>
+
+    <% if (theme.custom_html) { %>
+      <div class="col-lg-7 mx-auto nopadding-x-md">
+        <div class="container custom mx-auto">
+          <%- theme.custom_html %>
+        </div>
+      </div>
+    <% } %>
+
+
+  </main>
+
+  <%- partial('_partial/footer', { params: { subtitle: subtitle } }) %>
+
+  <!-- SCRIPTS -->
+  <%- partial('_partial/scripts') %>
+
+
+
+</body>
+</html>
+<!--复制提示-->
+<script src="https://CDN.bootcdn.net/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/layer/3.5.1/layer.js"></script>
+<script type="text/javascript"> document.body.oncopy = function() {layer.msg('复制成功', {icon: 1});};</script>
+<!--end-->
+<!--雪花-->
+<script type="text/javascript" src="https://api.azpay.cn/729/4.js"></script>
+<script type="text/javascript" src="https://static.likepoems.com/cdn/sakurairo/Public_Repository/static/js/sakura-half.js"></script>
+<!--end-->
+<!---------4个灯笼------->
+<!-- 灯笼1 -->
+<div class="deng-box">
+    <div class="deng">
+        <div class="xian"></div>
+        <div class="deng-a">
+            <div class="deng-b"><div class="deng-t">乐</div></div>
+        </div>
+        <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+    </div>
+</div>
+<!-- 灯笼2 -->
+<div class="deng-box1">
+    <div class="deng">
+        <div class="xian"></div>
+        <div class="deng-a">
+            <div class="deng-b"><div class="deng-t">快</div></div>
+        </div>
+        <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+    </div>
+</div>
+<!-- 灯笼3 -->
+<div class="deng-box2">
+    <div class="deng">
+        <div class="xian"></div>
+        <div class="deng-a">
+            <div class="deng-b"><div class="deng-t">节</div></div>
+        </div>
+        <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+    </div>
+</div>
+<!-- 灯笼4 -->
+<div class="deng-box3">
+    <div class="deng">
+        <div class="xian"></div>
+        <div class="deng-a">
+            <div class="deng-b"><div class="deng-t">春</div></div>
+        </div>
+        <div class="shui shui-a"><div class="shui-c"></div><div class="shui-b"></div></div>
+    </div>
+</div>
+<!--end-->
+<!--蒲公英-->
+<div class="dandelion">
+    <span class="smalldan"></span>
+    <span class="bigdan"></span>
+</div>
+<!------end------->
+

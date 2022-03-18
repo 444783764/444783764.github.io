@@ -1,0 +1,45 @@
+<%
+page.layout = "links"
+page.title = theme.links.title || __('links.title')
+page.subtitle = theme.links.subtitle || __('links.subtitle')
+page.banner_img = theme.links.banner_img
+page.banner_img_height = theme.links.banner_img_height
+page.banner_mask_alpha = theme.links.banner_mask_alpha
+%>
+
+<div class="row links">
+  <% for(const each of theme.links.items || []) { %>
+    <% if (!each.title || !each.link) continue %>
+    <div class="card col-lg-4 col-md-6 col-sm-12">
+      <a href="<%= url_for(each.link) %>" class="card-body hover-with-bg" target="_blank" rel="noopener">
+        <div class="card-content">
+          <% if (each.avatar || each.image) { %>
+            <div class="link-avatar my-auto">
+              <img src="<%= url_for(each.avatar || each.image) %>" alt="<%= each.title %>"
+                   onerror="this.onerror=null; this.src=this.srcset='<%= url_for(theme.links.onerror_avatar) %>'"/>
+            </div>
+          <% } %>
+          <div class="link-text">
+            <div class="link-title"><%- each.title %></div>
+            <div class="link-intro"><%- each.intro || '' %></div>
+          </div>
+        </div>
+      </a>
+    </div>
+  <% } %>
+</div>
+
+<% if(theme.links.custom.enable && theme.links.custom.content) { %>
+  <!-- Custom -->
+  <div class="custom mx-auto">
+      <hr><p>在下方评论处申请加入我的<font style=color:#FF0000>友链</font>，按如下格式提供信息：</p><ul><li><font style=color:#FFC0CB>博客名：</font>季节的雪</li><li><font style=color:#6495ED>简介：</font>错过就真的错过了...</li><li><font style=color:#7FFFD4>链接：</font>https://yang5201314.cn</li><li><font style=color:#FFD700>图片：</font>https://s4.ax1x.com/2022/03/04/bUncuj.jpg</li></ul>
+  </div>
+<% } %>
+
+<% if(theme.links.comments.enable) { %>
+  <!-- Comments -->
+  <article class="comments" id="comments">
+    <% var type = '_partial/comments/' + theme.links.comments.type %>
+    <%- partial(type) %>
+  </article>
+<% } %>

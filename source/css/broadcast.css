@@ -1,0 +1,104 @@
+/* 小喇叭特效 */
+@keyframes scaleDraw {
+
+  /*定义关键帧、scaleDrew是需要绑定到选择器的关键帧名称*/
+  0% {
+      transform: scale(1);
+      /*开始为原始大小*/
+  }
+
+  25% {
+      transform: scale(1.2);
+      /*放大1.2倍*/
+  }
+
+  50% {
+      transform: scale(1);
+  }
+
+  75% {
+      transform: scale(1.2);
+  }
+}
+
+.icon-laba {
+  position: relative;
+  top: -3px;
+  width: 50px;
+  height: 50px;
+  -webkit-animation-name: scaleDraw;
+  /*关键帧名称*/
+  -webkit-animation-timing-function: ease-in-out;
+  /*动画的速度曲线*/
+  -webkit-animation-iteration-count: infinite;
+  /*动画播放的次数*/
+  -webkit-animation-duration: 1.2s;
+  /*动画所花费的时间*/
+  -webkit-animation: scaleDraw 1.2s ease-in-out infinite !important;
+  animation: scaleDraw 1.2s ease-in-out infinite !important;
+}
+
+.typed-cursor {
+  opacity: 1;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+  font-size: 20px;
+  font-weight: bolder;
+  padding-left: 5px;
+}
+
+/* 光标特效 */
+@keyframes blink {
+  0% {
+      opacity: 1;
+  }
+
+  50% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+@-webkit-keyframes blink {
+  0% {
+      opacity: 1;
+  }
+
+  50% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+@-moz-keyframes blink {
+  0% {
+      opacity: 1;
+  }
+
+  50% {
+      opacity: 0;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+.notice_board {
+  margin: 20px 0 !important;
+}
+
+.notice {
+  /* background-color: #fff !important; */
+  border-radius: 0.5rem;
+  padding: 7px;
+  padding-top: 13px;
+  margin-bottom: 9rem ! important;
+}

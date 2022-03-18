@@ -1,0 +1,274 @@
+{
+  ".mine": [
+    {
+      "nickname": "又拍云",
+      "site": "https://console.upyun.com/dashboard/",
+      "content": "免费提供 CDN 加速和云存储服务"
+    },
+    {
+      "nickname": "腾讯云",
+      "site": "https://console.cloud.tencent.com/",
+      "content": "域名、服务器购买，DNS 解析，网站备案。"
+    },
+    {
+      "nickname": "vercel",
+      "site": "https://vercel.com/dashboard",
+      "content": "CDN 加速，备用。"
+    },
+    {
+      "nickname": "Github",
+      "site": "https://github.com/",
+      "content": "全球最大的代码托管平台。"
+    },
+    {
+      "nickname": "docsmall",
+      "site": "https://docsmall.com/image-compress",
+      "content": "图片压缩，支持 jpg、png 格式。主用。"
+    },
+    {
+      "nickname": "渐变色",
+      "site": "http://color.oulu.me/",
+      "content": "180 种渐变色，可复制 CSS 代码，下载渐变色图片。"
+    },
+    {
+      "nickname": "阿里巴巴矢量图标库",
+      "site": "https://www.iconfont.cn/",
+      "content": "图标非常多，支持 CSS、JS 引用，支持多种格式下载。"
+    },
+    {
+      "nickname": " iMyShare",
+      "site": "https://imyshare.com/",
+      "content": "精品实用网络资源导航，我愿称之为全网最强导航。"
+    },
+    {
+      "nickname": "小众软件",
+      "site": "https://www.appinn.com/",
+      "content": "分享免费、小巧、实用、有趣、绿色的软件。软件控最爱。"
+    },
+    {
+      "nickname": "致美化",
+      "site": "https://zhutix.com/",
+      "content": "最专业的桌面美化交流平台，打造属于自己的 windows。"
+    },
+    {
+      "nickname": "哔哩哔哩",
+      "site": "https://www.bilibili.com/",
+      "content": "娱乐、学习两不误，我在 B 站上大学。"
+    },
+    {
+      "nickname": "九尾搜搜",
+      "site": "https://gfsoso.soik.top/image.html",
+      "content": "结果来自谷歌图片，无须科学上网。搜涩图，很准！"
+    },
+    {
+      "nickname": "路过图床",
+      "site": "https://imgtu.com/",
+      "content": "我存放图片的地方"
+    },
+    {
+      "nickname": "favicon制作",
+      "site": "https://tool.lu/favicon/",
+      "content": "ico图标生成"
+    },
+    {
+      "nickname": "Semantic UI",
+      "site": "https://semantic-ui.com/",
+      "content": "开发框架"
+    },
+    {
+      "nickname": "便宜技术猫",
+      "site": "https://azpay.cn/",
+      "content": "关于博客美化，搭建的各种技术"
+    },
+    {
+      "nickname": "尘遇",
+      "site": "https://chenyu.me/",
+      "content": "关于博客美化，搭建的各种技术"
+    },
+    {
+      "nickname": "php中文网",
+      "site": "https://www.php.cn/",
+      "content": "程序员梦开始的地方！"
+    },
+    {
+      "nickname": "丁丁的个人网站",
+      "site": "https://www.hexcode.cn/",
+      "content": "一个分享stm32学习经验的博主"
+    },
+    {
+      "nickname": "Font Awesome中文网",
+      "site": "http://www.fontawesome.com.cn/",
+      "content": "开源图标网站"
+    },
+    {
+      "nickname": "FontAwesome动画",
+      "site": "https://l-lin.github.io/font-awesome-animation/",
+      "content": "图标动起来！！"
+    },
+    {
+      "nickname": "一刻相册",
+      "site": "https://photo.baidu.com/photo/web/home",
+      "content": "百度网盘旗下的，存储图片应该不错"
+    },
+    {
+      "nickname": "图片-SM.MS|挡泥板",
+      "site": "https://sm.ms/",
+      "content": "也是图床"
+    },
+    {
+      "nickname": "ClockLink",
+      "site": "https://www.clocklink.com/",
+      "content": "时钟，倒计时模板代码"
+    },
+    {
+      "nickname": "利熙博客",
+      "site": "https://www.liitk.com/",
+      "content": "一些关于博客美化的小技巧，和网页源码"
+    },
+    {
+      "nickname": "捷径之地博客",
+      "site": "https://moil.cc/",
+      "content": "一些关于博客美化的小技巧，和网页源码"
+    },
+    {
+      "nickname": "腾讯云域名管理",
+      "site": "https://console.cloud.tencent.com/domain/mydomain",
+      "content": "管理域名界面"
+    },
+    {
+      "nickname": "云与雾",
+      "site": "https://blog.yunyuwu.cn/",
+      "content": "一些关于博客美化的小技巧，企业版宝塔面板bp"
+    },
+    {
+      "nickname": "Animate",
+      "site": "https://animate.style/#migration",
+      "content": "css动画"
+    },
+    {
+      "nickname": "prismjs",
+      "site": "https://prismjs.com/",
+      "content": "代码高亮"
+    },
+    {
+      "nickname": "ALPHA CODERS",
+      "site": "https://alphacoders.com/",
+      "content": "壁纸，我博客文章首图就是这里的"
+    },
+    {
+      "nickname": "天气API",
+      "site": "https://tianqiapi.com/index",
+      "content": "API接口"
+    },
+    {
+      "nickname": "和风天气",
+      "site": "https://widget.qweather.com/",
+      "content": "API接口插件"
+    },
+    {
+      "nickname": "Imagine",
+      "site": "https://github.com/meowtec/Imagine",
+      "content": "图片压缩"
+    },
+    {
+      "nickname": "圣羊博客",
+      "site": "",
+      "content": "分享有用的博客技巧"
+    },
+    {
+      "nickname": "html颜色表",
+      "site": "https://baiyinet.cn/archives/82.html",
+      "content": "颜色表"
+    },
+    {
+      "nickname": "gitee",
+      "site": "https://gitee.com/zhen-wang-yang",
+      "content": "不错的开源网站"
+    },
+    {
+      "nickname": "GREASY Fork",
+      "site": "https://greasyfork.org/zh-CN",
+      "content": "油猴脚本大全"
+    },
+    {
+      "nickname": "chaipip",
+      "site": "https://www.chaipip.com/index.html",
+      "content": "ip查询"
+    },
+    {
+      "nickname": "机领网",
+      "site": "https://www.jlwz.cn/wapindex-1000-307.html",
+      "content": "ip查询"
+    },
+    {
+      "nickname": "爱给",
+      "site": "https://www.aigei.com/game2d/effect/",
+      "content": "游戏素材网"
+    },
+    {
+      "nickname": "一个工具箱",
+      "site": "http://www.atoolbox.net/Tool.php?Id=979",
+      "content": "gif动态图分解"
+    },
+    {
+      "nickname": "速抠图",
+      "site": "https://sukoutu.com/#",
+      "content": "在线抠图"
+    },
+    {
+      "nickname": "在线音频分割",
+      "site": "https://www.aconvert.com/cn/audio/split/",
+      "content": "音乐，视频分割,文件压缩"
+    },
+    {
+      "nickname": "时间转换",
+      "site": "https://www.convertworld.com/zh-hans/time/milliseconds.html",
+      "content": "各种关于时间的转换"
+    },
+    {
+      "nickname": "VIP付费音乐",
+      "site": "http://music.zhuolin.wang/",
+      "content": "付费音乐免费下载，很全"
+    },
+    {
+      "nickname": "lexClip",
+      "site": "https://www.flexclip.com/cn/tools/compress-video/",
+      "content": "视频压缩"
+    },
+    {
+      "nickname": "随机图片APL",
+      "site": "https://tuapi.eees.cc/",
+      "content": "图片api"
+    },
+    {
+      "nickname": "菜鸟工具",
+      "site": "https://c.runoob.com/front-end/3454/",
+      "content": "网址生成二维码..."
+    },
+    {
+      "nickname": "云转换",
+      "site": "https://cloudconvert.com/",
+      "content": "ttf转换woff,woff2,重要的是免费！"
+    },
+    {
+      "nickname": "Convertio",
+      "site": "https://convertio.co/zh/",
+      "content": "ttf转换woff,跟上一个差不多"
+    },
+    {
+      "nickname": "Wk-Helper",
+      "site": "https://script.521daigua.cn/",
+      "content": "刷wk"
+    },
+    {
+      "nickname": "TinyPNG",
+      "site": "https://tinify.cn/",
+      "content": "无损压缩图片，支持WebP,jpg,png格式"
+    },
+    {
+      "nickname": "念云",
+      "site": "https://www.nianyunzm.com/",
+      "content": "动漫壁纸大全"
+    }
+  ]
+}
