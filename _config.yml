@@ -107,7 +107,7 @@ theme: hexo-theme-fluid-1.8.14
 # github部署
 deploy:
   type: git
-  repo: git@github.com:444783764/444783764.github.io.git
+  repo: https://github.com/444783764/444783764.github.io.git
   branch: main
 
 abbrlink:
